@@ -1,5 +1,5 @@
-# ansible-libcloud-debian
+# ansible-libcloud-ubuntu
 
-Dockerfile for Debian-based ansible / libcloud docker image.
+Dockerfile for Ubuntu-based ansible / libcloud docker image.
 
 Based on modified source, which better handles gce metadata.
