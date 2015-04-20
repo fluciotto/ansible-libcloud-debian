@@ -11,7 +11,7 @@ RUN apt-get -y update && apt-get install -y \
 	python-setuptools \
 	python-pkg-resources \
 	python-pip \
-	ssh-client \
+	ssh-client
 
 # Ansible
 RUN mkdir /etc/ansible/
