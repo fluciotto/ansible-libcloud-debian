@@ -20,11 +20,9 @@ RUN mkdir -p /opt/ansible/
 RUN git clone http://github.com/ansible/ansible.git /opt/ansible
 WORKDIR /opt/ansible
 RUN git checkout tags/v2.0.0.1-1
-# RUN git submodule update --init
+# Update submodule
 RUN git rm -rf lib/ansible/modules/core
 RUN git submodule add -b stable-2.0.0.1 --name lib/ansible/modules/core https://github.com/ansible/ansible-modules-core.git lib/ansible/modules/core
-RUN git rm -rf v2/ansible/modules/core
-RUN git submodule add -b stable-2.0.0.1 --name v2/ansible/modules/core https://github.com/ansible/ansible-modules-core.git v2/ansible/modules/core
 
 ENV PATH /opt/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin
 ENV PYTHONPATH /opt/ansible/lib
